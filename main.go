@@ -11,10 +11,10 @@ func main() {
 	m := gomail.NewMessage()
 
 	// Set E-Mail sender
-	m.SetHeader("From", "alejandronicolas.waiz@gmail.com")
+	m.SetHeader("From", "sender-email@gmail.com")
 
 	// Set E-Mail receivers
-	m.SetHeader("To", "alejandronicolas.waiz@gmail.com")
+	m.SetHeader("To", "remitent-email@gmail.com")
 
 	// Set E-Mail subject
 	m.SetHeader("Subject", "Gomail test subject")
@@ -23,7 +23,7 @@ func main() {
 	m.SetBody("text/plain", "Hello there, this is an example. If you can read this, congratulations! You made it.")
 
 	// Settings for SMTP server
-	d := gomail.NewDialer("smtp.gmail.com", 587, "alejandronicolas.waiz@gmail.com", "olakease123")
+	d := gomail.NewDialer("smtp.gmail.com", 587, "sender-email@gmail.com", "My Complicated Password")
 
 	// This is only needed when SSL/TLS certificate is not valid on server.
 	// For production this should be set to false.
